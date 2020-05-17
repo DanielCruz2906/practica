@@ -26,5 +26,11 @@ class Elasticidad():
         else:
             print("Los valores no son correctos")
         print("\n*****************************\n")
-Formula = Elasticidad(8,7,1,2)
+
+Q1 = float(input("Dame el q1"))
+Q2 = float(input("Dame el q2"))
+P1 = float(input("Dame el p1"))
+P2 = float(input("Dame el p2"))
+
+Formula = Elasticidad(Q1,Q2,P1,P2)
 Formula.formula()
