@@ -14,3 +14,5 @@ def formula(self):
     LeftWhole = Left up / LeftDown
     RightWhole = RightUp / RightDown
     Ed = LeftWhole / RightWhole
+
+    return Ed
