@@ -13,7 +13,7 @@ def formula(self):
     RightUp = self.__p2 - self.__p2
     RightDown = (self.__p1 + self.__p2) / 2
     
-    LeftWhole = Left up / LeftDown
+    LeftWhole = LeftUp / LeftDown
     RightWhole = RightUp / RightDown
     Ed = LeftWhole / RightWhole
 
