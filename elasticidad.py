@@ -1,9 +1,11 @@
 class Elasticidad:
-    def__init__(self,q1,q2,p1,p2):
-    self.__q1 = q1 
-    self.__q2 = q2
-    self.__p1 = p1
-    self.__p2 = p2
+    def __init__ (self,q1,q2,p1,p2):
+        self.__q1 = q1 
+        self.__q2 = q2
+        self.__p1 = p1
+        self.__p2 = p2
+
+    
 
 def formula(self):
     LeftUp = self.__q2 - self.__q1 
