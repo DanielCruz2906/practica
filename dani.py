@@ -1,3 +1,10 @@
+from os import system,name
+def limpiar_pantalla():
+    if name=='nt':
+        system('cls')
+    else:
+        system('clear')
+
 class Elasticidad():
     def __init__(self,q1,q2,p1,p2):
         self.__q1 = q1 
@@ -14,23 +21,33 @@ class Elasticidad():
         LeftWhole = LeftUp / LeftDown
         RightWhole = RightUp / RightDown
         Ed = float(LeftWhole) / float(RightWhole)
-        print("\n*****************************\n")
-        print(f"La elasticidad de la demanda {Ed}")
-        print("\n*****************************\n")
-        if Ed > 1:
-            print("La demanda es elástica")
-        elif Ed < 1:
-            print("La demanda es inelástica")
-        elif Ed == 1:
-            print("La demanda es elasticad unitaria")
+###########################
+        if Ed < 0:
+            EdF = Ed * -1
         else:
-            print("Los valores no son correctos")
-        print("\n*****************************\n")
+            EdF = Ed
+ ##########################   
+        if EdF > 1:
+            print(f"La Elasticidad de la demanda es de [{EdF}] esto significa que es ¡ELÁSTICA!")
+        elif EdF < 1:
+            print(f"La Elasticidad de la demanda es de [{EdF}] esto significa que es ¡INELÁSTICA!")
+        elif EdF == 1:
+            print(f"La Elasticidad de la demanda es de [{EdF}] esto significa que es ¡UNITARIA!")
+        else:
+            print("¡X! Los valores no son correctos ¡X!")
+        
 
-Q1 = float(input("Dame el q1"))
-Q2 = float(input("Dame el q2"))
-P1 = float(input("Dame el p1"))
-P2 = float(input("Dame el p2"))
+limpiar_pantalla()
+Q1 = float(input("¿Cual es la primera cantidad demandada?:"))
+limpiar_pantalla()
+P1 = float(input("¿A que precio?:"))
+limpiar_pantalla()
+Q2 = float(input("¿Cual es la segunda cantidad demandada?:"))
+limpiar_pantalla()
+P2 = float(input("¿A que precio?:"))
+limpiar_pantalla()
+input('presiona enter para continuar...')
+limpiar_pantalla()
 
 Formula = Elasticidad(Q1,Q2,P1,P2)
 Formula.formula()
